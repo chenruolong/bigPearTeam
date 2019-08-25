@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>永辉仓库管理系统</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<header class="topBar">
+		<div class="img">
+			<img src="img/yh-logo.png" class="img-responsive" alt="Responsive image">
+		</div>
+		<div class="logo">
+			&nbsp;永辉仓库管理系统
+		</div>
+		<div>
+			<!--input class="rearch" type="text" -->
+		</div>
+		<div class="cricle">
+			<div class="staff-img">
+<!-- 插入右上角图片 -->
+				<img src="img/shuaizhao.jpg" class="staff-img img-responsive" alt="Responsive image">
+			</div>
+		</div>
+	</header>
+	<div class="shadoww"></div>
+	<div class="iimg">
+		<div class="masking"></div>
+		<div class="masking-bottom"></div>
+		<img src="img/yh.jpg" class="img-responsive navimg" alt="Responsive image">
+	</div>
+	<div class="leftsideBar">
+		<div class="my-nav">
+
+			<a style="font-weight: 350;" data-toggle="collapse" href="#collapse2" class="item">货物信息</a>
+			<div id="collapse2" class="collapse">
+				<a href="base_info.jsp" class="item-son dq-click">信息查看</a>
+	        <a href="revise.jsp" class="item-son dq-click">价格调整</a>
+	    	</div>
+			<a style="font-weight: 350;" data-toggle="collapse" href="#collapse3" class="item">库存管理</a>
+			<div id="collapse3" class="collapse">
+	        <a href="enter.jsp" class="item-son dq-click">入库登记</a>
+					<a href="delivery.jsp" class="item-son dq-click">出库登记</a>
+	    	</div>
+	    	<a style="font-weight: 350;" data-toggle="collapse" href="#collapse1" class="item">其他设置</a>
+			<div id="collapse1" class="collapse">
+	        	<a href="#" class="item-son">(开发中...)</a>
+
+	    	</div>
+		</div>
+	</div>
+	<div class="rightsideBar">
+		<div class="rectangle" id="dq-content">
+			<img src="img/yonghuicangku.jpg" class="img-responsive" alt="Responsive image">
+		</div>
+	</div>
+
+	<!-- 个人信息弹窗 -->
+	<div class="dropdown" style="right: 0; top: 0;">
+				<a class="staff-masking" data-toggle="dropdown" href="#">
+					<span class="glyphicon glyphicon-chevron-down icon-pull-down" style="float:left; top: 23px;"></span>
+				</a>
+				<ul class="dropdown-menu popover bottom" style="top: 60px;" role="menu" aria-labelledby="dropdownMenu1">
+					<div class="arrow" style="top:-11px; left: 68%;"></div>
+					<li role="presentation">
+						<a style="color:rgb(85, 63, 122);"  role="menuitem" tabindex="-1" data-toggle="modal" href="#personal-info">
+							<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人信息</a></li>
+					<li role="presentation">
+						<a style="color:rgb(85, 63, 122);"  role="menuitem" tabindex="-1" data-toggle="modal" href="#update-password">
+							<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;修改密码
+						</a>
+					</li>
+					<li role="presentation">
+						<a style="color:rgb(85, 63, 122);"  role="menuitem" tabindex="-1" data-toggle="modal" href="#about-us">
+							<span class="glyphicon glyphicon-paperclip"></span>&nbsp;&nbsp;关于我们
+						</a>
+					</li>
+					<li style="margin: 3px;" role="presentation" class="divider"></li>
+
+					<li role="presentation">
+						<a style="color:rgb(85, 63, 122);" role="menuitem" tabindex="-1" href="logOut.jsp">
+							<span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出登录
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 个人信息弹框 -->
+			<div style="margin-top: 15%;" class="modal fade" id="personal-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title" id="myModalLabel">个人信息</h4>
+			      </div>
+			      <div class="modal-body">
+			        <div style="display:inline-block;position: relative;width: 30%;">
+			        <img src="img/LearningKing.jpg" class="img-responsive" alt="Responsive image">
+			        </div>
+			        <div style="position: absolute;display: inline-block;top: 12px;left: 195px;font-size: 18px;line-height: 35px;">
+			        管理人员：刘子年<br>
+			        员工号：9527<br>
+			        出生日期：1996-12-31<br>
+			        备注：我是一个彩蛋。
+			        </div>
+			      </div>
+			      <div class="modal-footer">
+			        <button style="background-color:#fff; border:1px solid rgb(138, 138, 138);" type="button" class="btn" data-dismiss="modal">关&nbsp;闭</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+
+			<!-- 个人信息弹框 -->
+
+<!-- 修改密码弹出框 -->
+<div style="margin-top: 15%;" class="modal fade" id="update-password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+      </div>
+
+
+
+<!-- 修改密码表单 -->
+			<form class="pwd-form" >
+      <div style="font-family: sans-serif;" class="modal-body">
+					
+					<div class="form-group">
+							<label style="position: relative;left:170px;" for="u_code_old">旧密码：</label>
+						 <input style="position: fixed;padding: 4px;right:180px; border-radius: 3px; border:1px solid rgba(85, 63, 122, 0.5);" id="u_code_old" name="u_code_old" placeholder="请填写旧密码">
+						</div>
+						
+					<div class="form-group">
+						<label style="position: relative;left:170px;" for="u_code">新密码：</label>
+						<input style="position: fixed;padding: 4px;right:180px; border-radius: 3px; border:1px solid rgba(85, 63, 122, 0.5);" id="u_code" name="u_code" placeholder="请填写新密码">
+					</div>
+						<div class="form-group">
+						<label style="position: relative;left:170px;" for="u_codes">确认密码：</label>
+						<input style="position: fixed;padding: 4px;right:180px; border-radius: 3px; border:1px solid rgba(85, 63, 122, 0.5);" id="u_codes" name="u_codes" placeholder="请确认新密码">
+					</div>
+
+
+					<!-- <div class="dq-click" data-href="rightPages-tables.jsp" id="afterDoAddSucceed" ></div> -->
+      </div>
+      <div class="modal-footer">
+				<div style="text-align:center;">
+				<button style="background-color:#fff; border:1px solid rgb(138, 138, 138);" type="submit" data-href="pwd_Change.jsp" class="btn dq-click" data-after-json="myfunc"  >确&nbsp;定</button>
+			 </div>
+      </div>
+			</form>
+<!-- 修改密码表单 -->
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 修改密码弹出框 -->
+
+<!-- 关于我们弹框 -->
+<div style="margin-top: 10%;" class="modal fade" id="about-us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">关于我们</h4>
+			</div>
+			<div class="modal-body">
+			<img style="padding-left: 150px; padding-right: 150px;" src="img/PearTeam.png" class="img-responsive" alt="Responsive image">
+			<div style="text-align:center;">
+				法人代表：陈若龙<br>
+				注册资本：100.88元<br>
+				成立日期：2018年7月1日<br>
+				办公电话：029-83809333&nbsp;&nbsp;15014418810<br>
+				注册地址：陕西省西安理工大学（曲江）教学楼9号楼414机房<br>
+				经营范围：JavaWeb开发、中小学奥数辅导、代收菜鸟驿站，买买提烤肉园快递<br>
+			</div>
+			</div>
+			<div class="modal-footer">
+				<button style="background-color:#fff; border:1px solid rgb(138, 138, 138);" type="button" class="btn" data-dismiss="modal">关&nbsp;闭</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 关于我们弹框 -->
+
+
+<div class="alert alert-danger"  style="position: fixed;top:10%;left:50%;width:300px;margin-left:-150px;text-align:center;" id="myalert" ></div>
+
+	<footer class="copyright">
+		COPYRIGHT&nbsp;&copy;2018&nbsp;&nbsp;Big&nbsp;Pear&nbsp;Team.&nbsp;All&nbsp;rights&nbsp;reserved.
+	</footer>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="js/dq.js"></script>
+	
+	<script type="text/javascript">
+	$('#myalert').alert().hide();
+	function myfunc(result,dq){
+		if(result.success){
+			$('#update-password').modal('hide');
+			dqTip(result.message ? result.message : (successMsg ? successMsg : '操作成功！'), '#E9FFDD', '#33BB33', '#EEEEEE');
+			
+		}else{
+			$('#myalert').text(result.message).show().delay(1000).fadeOut();
+		}
+	}
+	
+	</script>
+	
+	
+	
+</body>
+</html>

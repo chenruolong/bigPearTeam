@@ -10,6 +10,10 @@ a{
   text-decoration: none;
   color: rgba(85, 63, 122, 1);
 }
+a:visited{
+  text-decoration: none;
+  color: rgba(85, 63, 122, 1);
+}
 .topBar{
   display: inline-block;
   box-sizing: border-box;
@@ -39,6 +43,40 @@ a{
   line-height: 60px;
   display: inline-block;
   font-size: 22px;
+}
+.cricle{
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 23px;
+  border: 2px solid #fff;
+}
+.staff-img{
+  display: inline-block;
+  position: fixed;
+  top: 9px;
+  right: 32px;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+}
+
+.staff-masking{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 100px;
+}
+.popover.bottom{
+  position: absolute;
+  left: calc(100% - 160px);
+  top: 60px;
+  width: 100px;
+
 }
 
 .shadoww{
@@ -106,20 +144,21 @@ a{
   box-shadow: rgba(0,0,0,.2) 0px 0px 30px;
 }
 
-.nav{
+.my-nav{
   display: inline-block;
   position: absolute;
+  right:0;
   top: 30px;
   left: 20px;
-  width: 200px;
+  width: 180px;
   bottom: 0;
 }
 
-.in, .collapsing{
+/* .in, .collapsing{
   background: -webkit-linear-gradient(left, rgb(169, 160, 187), rgba(85, 63, 122, 0.1));
   background: -o-linear-gradient(left, rgb(169, 160, 187), rgba(85, 63, 122, 0.1));
   background: linear-gradient(to right, rgb(169, 160, 187), rgba(85, 63, 122, 0.1));
-}
+} */
 
 .item:hover{
   color: #fff;
@@ -130,8 +169,14 @@ a{
   box-shadow: rgba(0,0,0,.2) 0px 0px 30px;
 }
 .item{
-  left: 10px;
   text-decoration: none;
+  display: inline-block;
+  width:180px;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  padding: 0 30px;
   -webkit-box-shadow: rgba(0,0,0,.2) 0px 0px 30px;
   -moz-box-shadow: rgba(0,0,0,.2) 0px 0px 30px;
   box-shadow: rgba(0,0,0,.2) 0px 0px 30px;
@@ -152,24 +197,15 @@ a:hover{
 }*/
 a:focus{
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
 }
 
-.item{
-  display: block;
-  width:200px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 20px;
-  padding: 0 30px;
-  overflow: auto;
-}
 .item-son{
   display: block;
-  width: 200px;
+  width: 180x;
   line-height: 30px;
   font-size: 18px;
-  padding: 0 60px;
+  padding: 0 40px;
 }
 .item-son:hover{
   text-shadow: rgba(0,0,0,.9) 3px 3px 30px;
@@ -195,7 +231,13 @@ a:focus{
   -webkit-box-shadow: rgba(0,0,0,.2) 0px 0px 10px;
   -moz-box-shadow: rgba(0,0,0,.2) 0px 0px 10px;
   box-shadow: rgba(0,0,0,.2) 0px 0px 10px;
-
+  overflow: auto;
+}
+.icon-pull-down{
+  color: rgb(200, 198, 215);
+}
+.icon-pull-down:hover{
+  color: #fff;
 }
 
 .copyright{
@@ -208,3 +250,5 @@ a:focus{
   text-align: center;
   background: rgb(200, 198, 215);
 }
+
+/* 11111111111 */

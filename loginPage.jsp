@@ -1,0 +1,170 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="UTF-8">
+<title>永辉仓库管理系统</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style media="screen">
+    .my-container{
+      margin: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      bottom: 0;
+      background: #fafafa;
+    }
+    .AD{
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 0;
+      width: 62%;
+      bottom: 0;
+
+      /* background: #aaa; */
+    }
+  	.our-copyright{
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 80%;
+      width: 160%;
+      bottom: 0;
+
+      /* background: #aaa; */
+    }
+    .straight-line{
+      position: absolute;
+      height: 70%;
+      top: calc(50% - 35%);
+      width: 1px;
+      right: 2%;
+      border-radius: 1px;
+      background: #553f797a;
+      /* -webkit-box-shadow: rgba(200, 198, 215, 0.9) 0px 0px 10px;
+      -moz-box-shadow: rgba(200, 198, 215, 0.9) 0px 0px 10px;
+      box-shadow: rgba(200, 198, 215, 0.9) 0px 0px 10px; */
+
+    }
+
+    .logo-center{
+    	margin: auto;
+    }
+	.AD-logo{
+      position: absolute;
+      display: inline-block;
+      padding-left: 20%;
+      padding-right: 20%;
+      top: 0;
+      bottom: 0;
+
+      /* background: #aaa; */
+    }
+    .login-bg{
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      top: 0;
+      width: 38%;
+      bottom: 0;
+      /* background: #999; */
+    }
+    .login-box{
+      position: absolute;
+      width: 350px;
+      left: calc(50% - 175px);
+      height: 300px;
+      top: calc(50% - 150px);
+      -webkit-box-shadow: rgba(200, 198, 215, 0.9) 0px 0px 10px;
+      -moz-box-shadow: rgba(200, 198, 215, 0.9) 0px 0px 10px;
+      box-shadow: rgba(200, 198, 215, 0.9) 0px 0px 10px;
+      border-radius: 3px;
+
+      /* background: #fff; */
+    }
+    .login-inbox{
+      position: absolute;
+      width: 70%;
+      height: 150px;
+      bottom: 10%;
+      left: calc(50% - 35%);
+      /* background: #aaa; */
+    .h-center{
+        margin: 0 auto;
+    }
+    .my-btn{
+      border-color: #000;
+      display: inline-block;
+      line-height: 20px;
+      padding: 12px;
+      margin-bottom: 0;
+      font-size: 20px;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 2px;
+    }
+
+    }
+  </style>
+</head>
+<body class="my-container">
+<div style="z-index: 2; position: fixed; bottom: 6%; width: 60%; left: calc(50% - 30%);">
+<img src="img/copyright.png" class="img-responsive logo-center AD-logo" alt="Responsive image">
+</div>
+  <div class="AD">
+    <img src="img/login-logo.png" class="img-responsive logo-center AD-logo" alt="Responsive image">
+      <div class="straight-line"></div>
+  </div>
+  <div class="login-bg">
+    <div class="login-box">
+
+
+
+      <div>
+    		<h1 style="position: relative; color: #553f79; top: 20px;left: 50px; color:#553f79;">欢迎使用</h1>
+    		<form style="top:15px; position:relative;" class="form"  action="login.jsp" method="post">
+    			<input style="color:#3a3a3a; background-color: rgba(220, 220, 220, 0.2);border: 1px solid rgb(85, 63, 121);" type="text" name="u_id" placeholder="请输入员工号">
+    			<input style="color:#3a3a3a; background-color: rgba(220, 220, 220, 0.2);border: 1px solid rgb(85, 63, 121);" type="password" name="u_pwd" placeholder="请输入密码">
+    			<button type="submit" id="login-button">登&nbsp;录</button>
+          <p class="text-warning" style="position:relative;left:50px;font-size: 15px; color:red; font-weight: 300;">${error }</p>
+        </form>
+    	</div>
+      <%-- <div class="login-inbox">
+        <!-- 登录表单插入位置 -->
+        <form class="form-inline login-inbox" action="login.jsp" method="post">
+               <div class="form-group">
+                 <input style="margin: 5px 0;width: 171px" class="form-control" type="text" name="u_id" placeholder="请输入员工号"/>
+               </div>
+               <div class="form-group">
+                 <input style="margin: 5px 0;width: 171px" class="form-control" type="password" name="u_pwd" placeholder="请输入密码"/>
+                </div>
+               <button style="margin: 5px 0;width: 171px ">登&nbsp;录</button>
+               <p class="text-warning" style="font-size: 15px; color:red; font-weight: bold;">${error }</p>
+        </form>
+      </div> --%>
+    </div>
+  </div>
+
+<!--div class="our-copyright">
+	<img src="img/our-logo.png" class="img-responsive logo-center" alt="Responsive image">
+</div -->
+
+<script src="js/jquery-1.12.4.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+	</script>
+</body>
+</html>
