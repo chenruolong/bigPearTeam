@@ -83,7 +83,7 @@
 					<li style="margin: 3px;" role="presentation" class="divider"></li>
 
 					<li role="presentation">
-						<a style="color:rgb(85, 63, 122);" role="menuitem" tabindex="-1" href="logOut.jsp">
+						<a style="color:rgb(85, 63, 122);" role="menuitem" tabindex="-1" href="index.html">
 							<span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出登录
 						</a>
 					</li>
@@ -132,12 +132,12 @@
 <!-- 修改密码表单 -->
 			<form class="pwd-form" >
       <div style="font-family: sans-serif;" class="modal-body">
-					
+
 					<div class="form-group">
 							<label style="position: relative;left:170px;" for="u_code_old">旧密码：</label>
 						 <input style="position: fixed;padding: 4px;right:180px; border-radius: 3px; border:1px solid rgba(85, 63, 122, 0.5);" id="u_code_old" name="u_code_old" placeholder="请填写旧密码">
 						</div>
-						
+
 					<div class="form-group">
 						<label style="position: relative;left:170px;" for="u_code">新密码：</label>
 						<input style="position: fixed;padding: 4px;right:180px; border-radius: 3px; border:1px solid rgba(85, 63, 122, 0.5);" id="u_code" name="u_code" placeholder="请填写新密码">
@@ -199,22 +199,22 @@
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="js/dq.js"></script>
-	
+
 	<script type="text/javascript">
 	$('#myalert').alert().hide();
 	function myfunc(result,dq){
 		if(result.success){
 			$('#update-password').modal('hide');
 			dqTip(result.message ? result.message : (successMsg ? successMsg : '操作成功！'), '#E9FFDD', '#33BB33', '#EEEEEE');
-			
+
 		}else{
 			$('#myalert').text(result.message).show().delay(1000).fadeOut();
 		}
 	}
-	
+
 	</script>
-	
-	
-	
+
+
+
 </body>
 </html>
