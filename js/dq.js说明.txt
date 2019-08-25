@@ -1,0 +1,81 @@
+dq.js使用说明
+作者：夏冬琦
+
+
+# 引入
+ dq.js依赖jquery，因此先引入jquery，再引入dq.js
+ 
+ 
+  
+# 类选择器.dq-click的使用
+ 在任何标签上都可以引入类.dq-click，使标签单击后发送ajax请求，具体细节如下：
+ 
+## 请求url按以下顺序环节获取，一旦在某环节获取，将不会进入后面的环节
+ 1.通过data-href属性获取；
+ 2.通过href属性获取；
+ 3.通过formaction属性获取；
+ 4.通过本表单元素所在表单的action属性获取；
+ 5.通过form属性获得表单id，进而从表单的action属性获取；
+ 6.通过包含本元素的，并且距本元素最近的form表单的aciton获取；
+ 7.通过页面第一个表单的action属性获取。
+
+## 请求数据按以下顺序环节获取，一旦在某环节获取，将不会进入后面的环节
+ 1.通过data-params属性获取；
+ 2.通过本表单元素所在表单获取；
+ 3.通过form属性获得表单id，进而从表单获取；
+ 4.通过包含本元素的，并且距本元素最近的form表单获取；
+ 5.通过页面第一个表单获取。
+ 
+## 属性data-confirm定义操作前的确认信息
+ 
+## 属性data-success-msg定义操作成功后的提示消息
+ 
+## 属性data-fail-msg定义操作失败后的提示消息
+ 
+## 响应数据为如下json格式的消息，则操作提示消息以json格式的消息优先。
+ json格式的消息 
+ {
+ 	"success":true/fasle,
+ 	"message":"xxxxxxx"
+ }
+ 
+## 属性data-succeed-click定义操作成功之后需要由js自动触发单击事件的标签选择器
+ 
+
+ 
+## 属性data-dq-target定义ajax请求发出后的响应数据的填充的ID选择器
+ 如果未定义该属性，则该属性默认为 #dq-content
+ 如果该属性定义为 dq-dlg ，则在打开的模态窗口中填充响应数据
+ 
+# 如何关闭模态窗口
+  不引用类.dq-click,可在标签上直接定义onclick="dqClose();"
+  
+  
+  
+# dq.js中定义的几个函数
+
+## 确认框函数
+ dqConfirm(msg,success,cancel)
+  参数说明 
+  msg ：确认消息
+  success ：确认之后执行的函数
+  cancel ：取消后执行的函数
+  
+## 提示框函数
+ dqTip(msg,bgColor,fontColor,borderColor)
+  参数说明 
+  msg ：提示消息
+  bgColor ：背景颜色
+  fontColor ：字体颜色
+  borderColor ：边框颜色
+
+## 模态窗口框函数
+ dqOpen(url,data)
+  参数说明 
+  url ：ajax加载信息的URL
+  data ：ajax提交的参数数据
+ 
+## 关闭模态窗口函数
+ dqClose() 
+ 
+ 
